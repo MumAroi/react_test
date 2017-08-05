@@ -1,0 +1,45 @@
+npm init -Y (Y = yes, can help you npm init --help)
+npm i -S react (S = save)
+npm i -S react-dom
+//npm install -g webpack
+npm i -D webpack  (D = development)
+npm i -D babel-core
+npm i -D babel-loader   
+npm i -D babel-preset-react   
+npm i -D babel-preset-es2015
+create file  webpack.config.js
+create file  index.heml
+create floder src
+create file  src/app.js
+ 
+
+ /*
+var webpack = require("webpack");
+var path = require('path');
+
+module.exports = {
+    entry: "./src/App.js",
+    output: {
+        // path: '/Users/admin/Git/react-flux-architecture-es6/dist/',
+        filename: "bundle.js",
+        publicPath: '/'
+    },
+    devServer: {
+        inline: false,
+        contentBase: "./dist",
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                exclude:/(node_modules|bower_components)/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015', 'react']
+                }
+            }
+        ]
+    }
+
+};
+*/
