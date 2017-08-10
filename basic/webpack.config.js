@@ -11,10 +11,10 @@ module.exports = {
         // publicPath: '/'
     },
      devtool:"#source-map",
-    // devServer: {
-    //     inline: false,
-    //     contentBase: "./dist",
-    // },
+    devServer: {
+        inline: false,
+        contentBase: "./dist",
+    },
     module: {
         loaders: [
             {
