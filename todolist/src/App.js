@@ -1,18 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Todoinput from "./Todoinput";
+import Todolist from "./Todolist";
+// import logo from './logo.svg';
+// import './App.css';
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      todoitem : [],
+      todoitem2 : []
+    }
+    this.addTodo = this.addTodo.bind(this);
+    this.addTodo2 = this.addTodo2.bind(this);
+  }
+
+  addTodo(newTodo){
+    this.setState({
+      todoitem : this.state.todoitem.concat([newTodo])
+    });
+  }
+
+  addTodo2(newTodo){
+    this.setState({
+      todoitem2 : this.state.todoitem2.concat([newTodo])
+    });
+  }
+
   render() {
+    let {todoitem, todoitem2} = this.state;
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Todolist item={todoitem}/>
+        <Todoinput onAddTodo={this.addTodo}/>
+
+        <Todolist item={todoitem2}/>
+        <Todoinput onAddTodo={this.addTodo2}/>
       </div>
     );
   }
