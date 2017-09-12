@@ -43,12 +43,25 @@ class Usurvey extends Component {
         });
     }
 
-    answerSelected(){
+    answerSelected(event){
+        var answers = this.state.answers;
+        if(event.target.name === 'answer1'){
+            answers.answer1 = event.target.value;
+        }else if(event.target.name === 'answer2'){
+            answers.answer2 = event.target.value;
+        }else if(event.target.name === 'answer3'){
+            answers.answer3 = event.target.value;
+        }
 
+        this.setState({
+            answers: answers
+        }, function(){
+            console.log(this.state);
+        });
     }
 
     questionSubmit(){
-        
+
     }
 
     render(){
@@ -89,6 +102,8 @@ class Usurvey extends Component {
                     <input className="feedback-button" type="submit" value="submit" />
                 </form>
             </div>;
+        }else if(this.state.isSubmitted === true){
+            studentName = <h1>Thanks, {this.state.studentName}</h1>
         }
 
         return(
