@@ -22,6 +22,8 @@ class Authen extends Component {
 
         this.login  = this.login.bind(this);
         this.signup = this.signup.bind(this);
+        this.logout = this.logout.bind(this);
+        this.google = this.google.bind(this);
     }
 
     login(event){
@@ -33,6 +35,12 @@ class Authen extends Component {
 
         // handle login promise 
         const promise = auth.signInWithEmailAndPassword(email, password);
+
+        promise.then(user => {
+            var lout = document.getElementById('logout');
+            lout.classList.remove('hide');
+        });
+
         promise.catch(e => {
             var err = e.message;
             console.log(err);
@@ -71,6 +79,25 @@ class Authen extends Component {
         // console.log(promise);
     }
 
+    logout(){
+        firebase.auth().signOut();
+        var lout = document.getElementById('logout');
+        lout.classList.add('hide');
+    }
+
+    google(){
+        var provider = new firebase.auth.GoogleAuthProvider();
+        var promise = firebase.auth().signInWithPopup(provider);
+
+        promise.then(result=>{
+            var user = result.user;
+            firebase.database().ref('users/'+user.uid).set({
+                email: user.email,
+                name: user.displayName
+            });
+        });
+    }
+
     render(){
         return(
             <div>
@@ -79,7 +106,8 @@ class Authen extends Component {
                 <p>{this.state.err}</p>
                 <button onClick={this.login} >Log In</button>
                 <button onClick={this.signup}>Sign Up</button>
-                <button>Log out</button>
+                <button onClick={this.logout} id="logout" className="hide" >Log out</button><br />
+                <button onClick={this.google} id="google" className="google" >Sign in google</button>
             </div>
         );
     }   
