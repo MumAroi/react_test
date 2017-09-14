@@ -37,6 +37,10 @@ class Authen extends Component {
         const promise = auth.signInWithEmailAndPassword(email, password);
 
         promise.then(user => {
+            console.log(user);
+            // firebase.database.ref('/').on('value').then(data => {
+            //     console.log(data);
+            // })
             var lout = document.getElementById('logout');
             lout.classList.remove('hide');
         });
