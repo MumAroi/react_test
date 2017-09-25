@@ -14,10 +14,12 @@ ReactDOM.render(
     <BrowserRouter>
         <div>
             <header>
-                {/* <Link to="/"   >Home</Link><br/>
-                <Link to="/post"  >Post</Link><br/> */}
+                <Link to="/"   >Home</Link><br/>
+                <Link to="/post"  >Post</Link><br/>
+                <hr/>
                 <NavLink exact to="/"  activeStyle={{color:'red'}} >Home</NavLink><br/>
                 <NavLink to="/post" activeStyle={{color:'red'}} >Post</NavLink><br/>
+                <hr/>
             </header>
             <Switch>
                 <Route path="/post/:id" component={PostItem}  />
@@ -27,5 +29,5 @@ ReactDOM.render(
         </div>
     </BrowserRouter>
     , document.querySelector('#root'));
-    
+
 registerServiceWorker();
