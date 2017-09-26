@@ -1,0 +1,14 @@
+.album_list {
+    margin: 20px;
+}
+
+.album_list:after {
+    clear: both;
+    display: table;
+    content: ''
+}
+
+.album_list > img {
+    float: left;
+    width: 50%;
+}

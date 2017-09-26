@@ -1,0 +1,27 @@
+.artists_list {
+    box-sizing: border-box;
+    padding: 10px 30px; 
+}
+
+.artists_list .artists_item {
+    display: block;
+    height: 290px;
+    background-size: cover !important;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.artists_list .artists_item div {
+    background: #4FC2E6;
+    color:#fff;
+    position: absolute;
+    bottom: 0px;
+    padding: 10px;
+}
+
+.artists_list h4 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 200px;
+    margin: 20px 0px;
+}
