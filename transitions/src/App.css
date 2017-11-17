@@ -72,6 +72,7 @@
 /* step 11 : create default item appear */
 .basic-appear {
   opacity: 0.01;
+  background: rgb(189, 96, 21);
 }
 /* step 12 : create animation item appear */
 .basic-appear.basic-appear-active {
@@ -113,6 +114,7 @@
 
 .fade-appear {
   opacity: 0.01;
+  background: rgb(189, 96, 21);
 }
 
 .fade-appear.fade-appear-active {
@@ -120,14 +122,14 @@
   transition: opacity .5s ease-in;
 }
 
-
+/* step 16 : create default add item  */
 .fade-enter {
   opacity: 0.01;
 }
-
+/* step 17 : create animatino add item  */
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: opacity 1000ms ease-in;
 }
 
 .fade-leave {
@@ -136,7 +138,7 @@
 
 .fade-leave.fade-leave-active {
   opacity: 0.01;
-  transition: opacity 300ms ease-in;
+  transition: opacity 1000ms ease-in;
 }
 
 

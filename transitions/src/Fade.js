@@ -4,7 +4,7 @@ import './App.css';
 
 import {fadeAnimation} from './animations.js'
 
-
+// step 14 : create variable for setting css animation
 // const fadeAnimation = {
 //     transitionName:"fade",
 //     transitionAppear:true,
@@ -54,7 +54,11 @@ class Fade extends Component{
     render(){
         return(
             <div>
-                <CSSTransitionGroup {...fadeAnimation}>
+                {/* step 13 : load css transition */}
+                <CSSTransitionGroup 
+                //  step 15 : variable setting
+                {...fadeAnimation}
+                >
                 {this.addElements()}
                 </CSSTransitionGroup>
 
