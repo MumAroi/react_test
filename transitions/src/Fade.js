@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { CSSTransitionGroup } from 'react-transition-group';
 import './App.css';
-
-import {fadeAnimation} from './animations.js'
+// step 22 : transition import
+import {fadeAnimation} from './animations'
 
 // step 14 : create variable for setting css animation
 // const fadeAnimation = {

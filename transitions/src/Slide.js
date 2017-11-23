@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { CSSTransitionGroup } from 'react-transition-group';
 import './App.css';
-
+// step 24 : transition import
 import {slideAnimation} from './animations.js'
 
-
+// step 26 : coppy code fadeAnimatino
 class Slide extends Component{
     constructor(props){
         super(props);

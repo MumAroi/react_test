@@ -111,12 +111,12 @@
 /*=======================================
                 FADE 
 ========================================*/
-
+/* step 20 : create default item appear */
 .fade-appear {
   opacity: 0.01;
   background: rgb(189, 96, 21);
 }
-
+/* step 21 : create animation item appear */
 .fade-appear.fade-appear-active {
   opacity: 1;
   transition: opacity .5s ease-in;
@@ -132,10 +132,11 @@
   transition: opacity 1000ms ease-in;
 }
 
+/* step 18 : create default remove item  */
 .fade-leave {
   opacity: 1;
 }
-
+/* step 19 : create animatino remove item  */
 .fade-leave.fade-leave-active {
   opacity: 0.01;
   transition: opacity 1000ms ease-in;
