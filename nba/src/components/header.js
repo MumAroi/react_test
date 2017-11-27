@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 // step 5 : create function Header
 const Header = () => {
     return (
+        // step 13 : create header
         <header>
             <div className="flexbox-container">
                 <Link to="/" className="logo">
