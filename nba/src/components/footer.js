@@ -1,6 +1,6 @@
 // step 7 :  import react and link
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 // step 8 : create function Footer
 const Footer = () => {
