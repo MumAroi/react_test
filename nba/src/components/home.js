@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 
 // step 19 : import component featured
 import Featured from './featured';
+// step 31 : import Subscriptions
+import Subscriptions from './subscriptions'
 
 // step 24 : create variable URL_HOME
 const URL_HOME = 'http://localhost:3004/home';
@@ -32,6 +34,8 @@ class Home extends Component {
             <div>
                 {/* step 21 : load featured and put props*/}
                 <Featured slides={this.state.home.slider} />
+                {/* step 33 : load component Subscription */}
+                <Subscriptions/>
             </div>
         );
     }

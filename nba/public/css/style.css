@@ -59,7 +59,7 @@ footer {
 .item-slider {
     height: 700px;
     background-size: cover !important;
-    background-position: center center;
+    background-position: center center !important;
     position: relative;
     font-family: 'Fjalla One';
 }
