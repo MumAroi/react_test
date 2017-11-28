@@ -83,3 +83,21 @@ footer {
     font-size: 70px;
     margin-top: 0;
 }
+
+/* step 36 : set style validate */
+
+.subscribe-panal .error {
+    display: none;
+    color: #f44336;
+}
+
+.subscribe-panal .success {
+    display: none;
+    color: #4caf50;
+}
+
+.subscribe-panal .error.show,
+.subscribe-panal .success.show {
+    display: block;
+
+}
