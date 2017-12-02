@@ -99,5 +99,35 @@ footer {
 .subscribe-panal .error.show,
 .subscribe-panal .success.show {
     display: block;
+}
 
+.subscribe-panal {
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.subscribe-panal h3 {
+    font-family: 'Fjalla One';
+    font-weight: 300;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+.subscribe-panal input {
+    border-radius: 20px;
+    border: 3px solid #dddddd;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    margin: 10px  0;
+}
+
+.subscribe-panal input:focus {
+    outline-width: 0;
+}
+
+.subscribe-panal small {
+    font-size: 10px;
+    line-height: 0;
 }
