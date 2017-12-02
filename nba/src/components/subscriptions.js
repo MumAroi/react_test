@@ -28,6 +28,7 @@ class Subscriptions extends Component {
         }else{
             this.setState({error: true});
         }
+        this.clearMeaaages();
     }
 
     // step 35 : create func saveSubsctiption
@@ -47,8 +48,17 @@ class Subscriptions extends Component {
                 email: '',
                 success: true
             });
-        })
+        });
+    }
 
+    // step 37 : create func clearMessages 
+    clearMeaaages = () => {
+        setTimeout(function(){
+            this.setState({
+                error:   false,
+                success: false
+            });
+        }.bind(this),3000);
     }
 
     render(){
