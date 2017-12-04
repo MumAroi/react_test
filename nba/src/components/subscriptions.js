@@ -33,7 +33,7 @@ class Subscriptions extends Component {
 
     // step 35 : create func saveSubsctiption
     saveSubscription = ( email ) => {
-        const URL_EMAIL = 'http://localhost:3004/subcriptions';
+        const URL_EMAIL = 'https://json-server-nba.herokuapp.com/subcriptions';
         fetch(URL_EMAIL, {
             method: "POST",
             headers: {

@@ -7,7 +7,7 @@ import Featured from './featured';
 import Subscriptions from './subscriptions'
 
 // step 24 : create variable URL_HOME
-const URL_HOME = 'http://localhost:3004/home';
+const URL_HOME = 'https://json-server-nba.herokuapp.com/home';
 
 // step 11 : create Home class
 class Home extends Component {
