@@ -7,7 +7,7 @@ import {Fade} from 'react-reveal';
 const Blocks = (props) => {
         console.log(props)
         return(
-            <div className="home-block">
+            <div className="home-blocks">
                 {generateBlocks(props)}
             </div>
         );
@@ -18,9 +18,9 @@ const generateBlocks  = ({blocks}) => {
     if(blocks){
         return blocks.map((item)=>{
             return(
-                // load fade
+                // step 44 : create fade template
                 <Fade bottom key={item.id} className={`item ${item.type}`} >
-                    <div className="vell" ></div>
+                    <div className="veil" ></div>
                     <div className="image" style={{background: `url(/images/blocks/${item.image}) no-repeat` }} ></div>
                     <div className="title" >
                         <Link to={item.link}>{item.title}</Link>
