@@ -4,7 +4,9 @@ import React, {Component} from 'react';
 // step 19 : import component featured
 import Featured from './featured';
 // step 31 : import Subscriptions
-import Subscriptions from './subscriptions'
+import Subscriptions from './subscriptions';
+// step 38 : inport Block
+import Blocks from './blocks';
 
 // step 24 : create variable URL_HOME
 const URL_HOME = 'https://json-server-nba.herokuapp.com/home';
@@ -36,6 +38,8 @@ class Home extends Component {
                 <Featured slides={this.state.home.slider} />
                 {/* step 33 : load component Subscription */}
                 <Subscriptions/>
+                {/* step 40 : load component Blocks */}
+                <Blocks blocks={this.state.home.blocks} />
             </div>
         );
     }

@@ -12,7 +12,7 @@ const Header = () => {
                     <span></span>
                 </Link>
                 <nav>
-                    <Link to="/theams">Theams</Link>
+                    <Link to="/themes">Themes</Link>
                 </nav>
             </div>
         </header>
