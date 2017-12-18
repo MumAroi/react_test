@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import {Fade} from 'react-reveal';
 // step 39 : create Blocks component
 const Blocks = (props) => {
-        console.log(props)
         return(
             <div className="home-blocks">
                 {generateBlocks(props)}

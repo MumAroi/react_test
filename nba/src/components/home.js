@@ -5,9 +5,10 @@ import React, {Component} from 'react';
 import Featured from './featured';
 // step 31 : import Subscriptions
 import Subscriptions from './subscriptions';
-// step 38 : inport Block
+// step 38 : import Block
 import Blocks from './blocks';
-
+// step 46 : import poll
+import Poll from './poll';
 // step 24 : create variable URL_HOME
 const URL_HOME = 'https://json-server-nba.herokuapp.com/home';
 
@@ -40,6 +41,7 @@ class Home extends Component {
                 <Subscriptions/>
                 {/* step 40 : load component Blocks */}
                 <Blocks blocks={this.state.home.blocks} />
+                <Poll />
             </div>
         );
     }
