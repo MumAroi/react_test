@@ -5,6 +5,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './header';
 import Footer from './footer';
 import Home   from './home';
+// step 53 : import teams
+import Teams from './teams';
 class App extends Component {
   render() {
     return (
@@ -13,6 +15,8 @@ class App extends Component {
         <div>
           <Header/>
           <Route exact path="/" component={Home} />
+          {/* step 54 : create route Teams */}
+          <Route exact path="/teams" component={Teams} />
           <Footer/>
         </div>
       </BrowserRouter>
