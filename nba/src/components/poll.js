@@ -21,12 +21,27 @@
             this.setState({
                 pollTeams: json
             });
-        })
+        });
     }
 
     // step 50 : creact componentDidMount
     componentDidMount(){
         this.fetchPoll();
+    }
+
+    // step 51 : create addCount
+    addCount(count, id){
+        fetch(`${URL_HOME}/${id}`,{
+            method: 'PATCH',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify({count: count+1})
+        })
+        .then(()=>{
+            this.fetchPoll();
+        });
     }
 
     // step : 48 create func renderPoll
@@ -35,7 +50,7 @@
             const position = ['1ST','2ND','3RD'];
             return this.state.pollTeams.map((item, index)=>{
                 return(
-                    <div key={item.id} className="poll-item">
+                    <div key={item.id} className="poll-item" onClick={()=>this.addCount(item.count, item.id)} >
                         <img alt={item.name} src={`/images/teams/${item.logo}`} />
                         <h4>{position[index]}</h4>
                         <div>{item.count} Vote</div>
