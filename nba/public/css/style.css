@@ -253,3 +253,46 @@ footer {
     opacity: 1;
     transition: opacity .5s ease-in;
 }
+
+/* step 63 : style teamSearch */
+
+.teams-conponent {
+    min-height: 800px;
+}
+
+.teams-input {
+    text-align: center;
+    padding: 20px 0;
+    background: #e6e6e6;
+}
+
+.teams-input input {
+    border-radius: 30px;
+    border: 1px solid lightgray;
+    color: black;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    padding: 10px;
+}
+
+.teams-input input:focus {
+   outline: none;
+}
+
+.teams-container span {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.teams-container .team-item {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.teams-container .team-item img {
+    width: 100%;
+}

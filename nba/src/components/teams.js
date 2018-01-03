@@ -52,12 +52,31 @@ class Teams extends Component {
         })
     }
 
+    // step 62 : create fucn searchTeam
+    searchTeam = (event) => {
+        const keyword = event.target.value;
+        if(keyword !== ''){
+            const list = this.state.filtered.filter((item)=>{
+                return item.name.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
+            });
+            this.setState({
+                filtered: list,
+                keyword 
+            });
+        }else{
+            this.setState({
+                filtered: this.state.teams,
+                keyword
+            });
+        }
+    }
+
     render(){
         return(
             // step 56 : create layout
             <div className="teams-component">
                 <div className="teams-input">
-                    <input type="text" placeholder="Seach for a team" />
+                    <input type="text" placeholder="Seach for a team" value={this.state.keyword} onChange={e=>this.searchTeam(e)}/>
                 </div>
                 <div className="teams-container">
                     <CSSTransitionGroup {...fadeAnimation}>
