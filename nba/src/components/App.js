@@ -7,6 +7,9 @@ import Footer from './footer';
 import Home   from './home';
 // step 53 : import teams
 import Teams from './teams';
+// step 64 : import team
+import Team from './team';
+
 class App extends Component {
   render() {
     return (
@@ -17,6 +20,8 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           {/* step 54 : create route Teams */}
           <Route exact path="/teams" component={Teams} />
+          {/* step 65 : create route Team */}
+          <Route exact path="/team/:id" component={Team} />
           <Footer/>
         </div>
       </BrowserRouter>
