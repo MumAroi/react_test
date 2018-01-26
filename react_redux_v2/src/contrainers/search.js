@@ -49,7 +49,7 @@ class Search extends Component {
 // step 22 : map dispath to props
 function mapDispathToProps(dispath){
     return(
-        // step 24 : bine action
+        // step 24 : bind action
         bindActionCreators({getCars},dispath)
     );
 }
