@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+// step 19 : connect redux
+import { connect } from 'react-redux';
+// step 20 : import getCars from action
+import getCars from '../actions';
+// step 23 : bindActionCreators
+import { bindActionCreators } from 'redux';
 
 class Search extends Component {
     constructor(props){
@@ -24,7 +30,8 @@ class Search extends Component {
     // step 11 : create func searchCars
     searchCars = (event) => {
         event.preventDefault();
-        console.log(this.state);
+        // step 26 : uase func from acontion
+        this.props.getCars(this.state.keyword);
     }
 
     render(){
@@ -39,4 +46,13 @@ class Search extends Component {
     }
 }
 
-export default Search;
+// step 22 : map dispath to props
+function mapDispathToProps(dispath){
+    return(
+        // step 24 : bine action
+        bindActionCreators({getCars},dispath)
+    );
+}
+
+// step 25 : connect store
+export default connect(null, mapDispathToProps)(Search);
