@@ -24,3 +24,27 @@ body {
 .main-search input:focus {
     outline: none;
 }
+
+/* step 39 : style for list of cars */
+.cars-item {
+    display: flex;
+    border: 1px solid lightgray;
+    margin: 10px;
+}
+
+.cars-item .left {
+    width: 100px;
+}
+
+.cars-item .left img {
+    width: 100%;
+}
+
+.cars-item .right {
+    flex-grow: 1;
+    padding: 10px;
+}
+.cars-item .right h4,
+.cars-item .right h6 {
+    margin: 0px;
+}

@@ -24,7 +24,7 @@ class Search extends Component {
 
     // strp 10 : use componentDisMount
     componentDidMount(){
-        console.log(this.state);
+        // console.log(this.state);
     }
 
     // step 11 : create func searchCars

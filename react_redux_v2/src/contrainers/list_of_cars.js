@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // step 33 : connect redux
 import { connect } from 'react-redux';
+// step 37 : link 
+import { Link } from 'react-router-dom';
 
 class ListOfCars extends Component {
 
@@ -9,9 +11,16 @@ class ListOfCars extends Component {
         if(cars){
             return cars.map((item)=>{
                 return(
-                    <div className="cars-item" >
-                        {item.model}
-                    </div>
+                    // step 38 : create link car:id and component
+                    <Link key={item.id} to={`/car/${item.id}`} className="cars-item" >
+                        <div className="left">
+                            <img src={`/images/${item.image}`} alt={item.image}/>
+                        </div>
+                        <div className="right">
+                            <h4>{item.model}</h4>
+                            <h6>{item.brand}</h6>
+                        </div>
+                    </Link>
                 );
             })
         }
