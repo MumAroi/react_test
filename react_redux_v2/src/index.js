@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
 import registerServiceWorker from './registerServiceWorker';
 
+import App from './components/app';
 // step 1 : BrowserRouter and Route from react router
 import { BrowserRouter, Route } from 'react-router-dom';
 // step 4 : Care component
-import Car from './components/car';
+import Car from './contrainers/car';
 // step 7 : css 
 import './index.css';
 // step 12 : provider 

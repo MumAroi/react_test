@@ -1,3 +1,4 @@
+
 // step 27 : data url
 const URL_ROOT = "https://json-server-react-redux-v2.herokuapp.com";
 
@@ -10,6 +11,20 @@ export default function getCars(keywords){
     // step 29 : return data to reducer
     return({
         type: 'SEARCH_CARS',
+        payload: request
+    });
+}
+
+// step 46 : create func getDetail
+export function getDetail(id) {
+
+    // step 47 : get car detail
+    const request = fetch(`${URL_ROOT}/carsIndex?id=${id}`,{method:"GET"})
+    .then(response=>response.json())
+        console.log(request);
+
+    return({
+        type: 'CAR_DETAIL',
         payload: request
     });
 }

@@ -37,7 +37,7 @@ class ListOfCars extends Component {
 
 // step 34 : map state to props
 function mapStateToProps(state){
-    console.log(state);
+    // console.log(state);
     return{
         cars: state.cars
     };
