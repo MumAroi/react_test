@@ -6,6 +6,8 @@ export default function (state=[], action){
         case "SEARCH_CARS":
             // console.log(action.payload);
             return action.payload;
+        case "CAR_DETAIL":
+            return action.payload;
         default:
             return state;
     }

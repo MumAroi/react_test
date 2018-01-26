@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // step 19 : connect redux
 import { connect } from 'react-redux';
 // step 20 : import getCars from action
-import getCars from '../actions';
+import { getCars } from '../actions';
 // step 23 : bindActionCreators
 import { bindActionCreators } from 'redux';
 
