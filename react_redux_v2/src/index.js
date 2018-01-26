@@ -15,8 +15,11 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware} from 'redux';
 // step 16 : reducers
 import reducers from './reducers';
+// step 31 : redux promise middleware
+import promiseMiddleware from 'redux-promise';
 // step 14 : create store
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+// step 32 : add promise(promiseMiddleware) to middleware(applyMiddleware)
+const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore);
 
 ReactDOM.render(
     // step 15 : make provider
