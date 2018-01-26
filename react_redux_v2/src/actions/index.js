@@ -29,3 +29,21 @@ export function getDetail(id) {
         payload: request
     });
 }
+
+// step 53 : clear detail
+export function clearDetail(id) {
+    return({
+        type: 'CLEAR_DETALI',
+        payload: []
+    });
+}
+
+// step 54 : get all cars
+export function listCars() {
+    const request = fetch(`${URL_ROOT}/carsIndex`,{method:"GET"})
+    .then(response=>response.json())
+    return({
+        type: 'LIST_CARS',
+        payload: request
+    });
+}

@@ -3,13 +3,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // step 37 : link 
 import { Link } from 'react-router-dom';
+// step 56 : action listCars
+import { listCars } from '../actions';
+// step 58 : bind action
+import { bindActionCreators } from 'redux';
 
 class ListOfCars extends Component {
 
+    // step 57 : componentdidmount call action
+    componentWillMount(){
+        this.props.listCars();
+    }
+
     // step 36 : create func listOfCars
-    listOfCars = ({cars}) => {
-        if(cars){
-            return cars.map((item)=>{
+    listOfCars = ({list}) => {
+        if(list){
+            return list.map((item)=>{
                 return(
                     // step 38 : create link car:id and component
                     <Link key={item.id} to={`/car/${item.id}`} className="cars-item" >
@@ -29,7 +38,7 @@ class ListOfCars extends Component {
     render(){
         return(
             <div>
-               {this.listOfCars(this.props)}
+               {this.listOfCars(this.props.cars)}
             </div>
         );
     }
@@ -42,6 +51,10 @@ function mapStateToProps(state){
         cars: state.cars
     };
 }
+// step 55 : mapdispathtoprops
+function mapDispathToProps(dispath){
+    return bindActionCreators({listCars}, dispath);
+}
 
 //  step 35 : connect reducer
-export default connect(mapStateToProps,null)(ListOfCars);
+export default connect(mapStateToProps,mapDispathToProps)(ListOfCars);

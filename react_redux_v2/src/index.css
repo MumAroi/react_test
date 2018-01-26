@@ -48,3 +48,17 @@ body {
 .cars-item .right h6 {
     margin: 0px;
 }
+
+/* step 51 : style for car detail */
+.car-detail img {
+    width: 100%;
+}
+
+.car-detail h2,
+.car-detail h4 {
+    margin: 0px
+}
+
+.car-detail .content {
+    padding: 10px
+}
