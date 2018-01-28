@@ -43,7 +43,8 @@ class Subscriptions extends Component {
             body: JSON.stringify({email})
         })
         .then(res=>res.json())
-        .then(()=>{
+        .then((res)=>{
+            // console.log(res)
             this.setState({
                 email: '',
                 success: true
