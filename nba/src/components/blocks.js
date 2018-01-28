@@ -1,6 +1,6 @@
 import React from 'react';
 // step 43 : import react-routee-dom
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // step 42 : import react-reveal
 import {Fade} from 'react-reveal';
 // step 39 : create Blocks component
