@@ -22,7 +22,7 @@ const generateBlocks  = ({blocks}) => {
                     <div className="veil" ></div>
                     <div className="image" style={{background: `url(/images/blocks/${item.image}) no-repeat` }} ></div>
                     <div className="title" >
-                        <Link to={item.link}>{item.title}</Link>
+                        <div>{item.title}</div>
                     </div>
                 </Fade>
             );
