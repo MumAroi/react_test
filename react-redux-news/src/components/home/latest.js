@@ -2,6 +2,7 @@ import React from 'react';
 // load link
 import { Link } from 'react-router-dom';
 
+// template latest
 const showLatest = ({latest}) => {
     if(latest){
         // console.log(latest)
