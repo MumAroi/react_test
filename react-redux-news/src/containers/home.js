@@ -19,7 +19,7 @@ class Home extends Component {
     render(){
         return(
             <div>
-                <LatestNews/>
+                <LatestNews latest={this.props.articles.latest}/>
             </div>
         );
     }
@@ -27,6 +27,7 @@ class Home extends Component {
 
 // step 13 : map state to props
 function mapStateToProps(state){
+    // console.log(state);
     return{
         articles: state.articles
     }
