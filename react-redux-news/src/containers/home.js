@@ -10,6 +10,12 @@ import { latestNews } from '../action';
 import { bindActionCreators } from 'redux'; 
 
 class Home extends Component {
+
+    // step 15 : run action 
+    componentDidMount(){
+        this.props.latestNews();
+    }
+
     render(){
         return(
             <div>
