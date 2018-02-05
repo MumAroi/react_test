@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 // step 5 : import route
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+/* COMPONENTS */
+// step 8 : load header and footer
+import Header from './header';
+import Footer from './footer';
+
+/* CONTAINERS */
 // step 7 : load home
 import Home from '../containers/home';
 class App extends Component {
@@ -9,9 +16,11 @@ class App extends Component {
 		// step 6 : setup route
 		<BrowserRouter>
 			<div>
+				<Header/>
 				<Switch>
 					<Route exact path="/" component={Home} />
 				</Switch>
+				<Footer/>
 			</div>
 		</BrowserRouter>
     );
