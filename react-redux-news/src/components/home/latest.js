@@ -12,7 +12,7 @@ const showLatest = ({latest}) => {
                     <div className="image-cover" style={{background:`url(/images/articles/${item.img})`}} >
                         <div className="description">
                             <span>{item.category}</span>
-                            <span>{item.title}</span>
+                            <div>{item.title}</div>
                         </div>
                     </div>
                 </Link>
