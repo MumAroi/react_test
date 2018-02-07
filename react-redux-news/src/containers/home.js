@@ -26,7 +26,7 @@ class Home extends Component {
             <div>
                 <LatestNews latest={this.props.articles.latest}/>
                 <Othernews otherNews={this.props.articles.other}/>
-                <Gallery latestGallerys={this.props.gallerys.latestGallerys}/>
+                <Gallery latestGalleries={this.props.galleries.latestGalleries}/>
             </div>
         );
     }
@@ -37,7 +37,7 @@ function mapStateToProps(state){
     // console.log(state);
     return{
         articles: state.articles,
-        gallerys: state.gallerys
+        galleries: state.galleries
     }
 }
 // step 14 : dispatch reducer

@@ -114,3 +114,31 @@ header, footer {
     margin-right: 15px;
     color: #607d8b
 }
+
+/* galleies */
+
+.home-gallerys {
+    text-align: left;
+}
+
+.home-gallerys h2 {
+    font-weight: 200;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+.home-gallerys .slider-item .image {
+    background-size: cover !important;
+    background-position: center center !important;
+    width: 100%;
+    height: 370px;
+    position: relative;
+}
+
+.home-gallerys .slider-item .image h3 {
+    position: absolute;
+    font-size: 30px;
+    bottom: 0px;
+    left: 20px;
+    color: #fff;
+}

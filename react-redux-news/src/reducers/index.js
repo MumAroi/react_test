@@ -2,11 +2,11 @@
 import { combineReducers } from 'redux';
 // load article reducers 
 import articles from './articles_reducer';
-import gallerys from './gallerys_reducers';
+import galleries from './gallerys_reducers';
 
 const rootReducers = combineReducers({
     articles,
-    gallerys
+    galleries
 });
 // export reducers after combine
 export default rootReducers;
