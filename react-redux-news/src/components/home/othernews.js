@@ -9,9 +9,9 @@ const renderOtherNews = ({otherNews}) => {
         return otherNews.map((item)=>{
             return(
                 <Link to={`/news/${item.id}`} key={item.id} className="item" >
-                    <div className="left" style={{background:`ut(/images/articles/${item.img})`}}>
+                    <div className="left" style={{background:`url(/images/articles/${item.img})`}}>
                     </div>
-                    <div className="rigth">
+                    <div className="right">
                         <h3>{item.title}</h3>
                         <div className="category-tag">{item.category}</div>
                         <div className="tags">

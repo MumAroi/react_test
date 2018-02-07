@@ -55,3 +55,62 @@ header, footer {
     background: rgba(53,53,53,0.64);
     width: 40%;
 }
+
+/* other news */
+.other-news {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.other-news h3 {
+    font-weight: 300;
+}
+
+.other-news-items .item {
+    display: flex;
+    border:1px solid #e6e6ee;
+} 
+
+.other-news-items .item .left {
+    display: flex;
+    width: 100px;
+    height: 120px;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+.other-news-items .item .right {
+    width: 85%;
+    height: 120px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.other-news-items .item .right  h3 {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.other-news-items .item .right .category-tag {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: #00bcd4;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.other-news-items .item .right .tags {
+    position: absolute;
+    bottom: 0px;
+}
+
+.other-news-items .item .right .tags span {
+    font-size: 13px;
+    margin-right: 15px;
+    color: #607d8b
+}
