@@ -10,6 +10,8 @@ import Footer from './footer';
 /* CONTAINERS */
 // step 7 : load home
 import Home from '../containers/home';
+import News from '../containers/news';
+
 class App extends Component {
   render() {
     return (
@@ -19,6 +21,7 @@ class App extends Component {
 				<Header/>
 				<Switch>
 					<Route exact path="/" component={Home} />
+					<Route path="/news/:id" component={News} />
 				</Switch>
 				<Footer/>
 			</div>

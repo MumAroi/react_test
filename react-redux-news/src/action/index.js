@@ -28,3 +28,8 @@ export function latestGallery() {
         payload: request
     };
 }
+
+// news action
+export function selectNews(){
+    
+}
