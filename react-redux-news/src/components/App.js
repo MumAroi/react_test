@@ -11,6 +11,7 @@ import Footer from './footer';
 // step 7 : load home
 import Home from '../containers/home';
 import News from '../containers/news';
+import GalleryItem from '../containers/galleryItem'
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route path="/news/:id" component={News} />
+					<Route path="/galleries/:id" component={GalleryItem} />
 				</Switch>
 				<Footer/>
 			</div>
