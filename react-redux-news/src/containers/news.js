@@ -4,6 +4,17 @@ import { selectedNews, clearSelectedNews} from '../action';
 import { bindActionCreators } from 'redux';
 
 class News extends Component {
+
+    // call action selectedNews
+    componentDidMount(){
+        this.props.selectedNews(this.props.match.params.id);
+    }
+
+    // clear data
+    componentWillUnmount(){
+        this.props.clearSelectedNews();
+    }
+
     render(){
         return(
             <div>
@@ -13,12 +24,15 @@ class News extends Component {
     }
 }
 
+// subscipt data 
 function mapStateToProps(state){
+    console.log(state)
     return{
         articles: state.articles
     }
 }
 
+// pass action to props
 function mapDispatchToPropsI(dispatch){
     return bindActionCreators({selectedNews, clearSelectedNews}, dispatch);
 }
