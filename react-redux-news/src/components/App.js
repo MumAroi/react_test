@@ -11,7 +11,7 @@ import Footer from './footer';
 // step 7 : load home
 import Home from '../containers/home';
 import News from '../containers/news';
-import GalleryItem from '../containers/galleryItem'
+import GalleryItem from '../containers/galleryitem'
 
 class App extends Component {
   render() {
