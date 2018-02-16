@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { selectedNews, clearSelectedNews} from '../action';
+import { selectedNews, clearSelectedNews } from '../action';
 import { bindActionCreators } from 'redux';
 
 // conpomemt
@@ -9,21 +9,21 @@ import Counter from './likecounter';
 class News extends Component {
 
     // call action selectedNews
-    componentDidMount(){
+    componentDidMount() {
         this.props.selectedNews(this.props.match.params.id);
     }
 
     // clear data
-    componentWillUnmount(){
+    componentWillUnmount() {
         this.props.clearSelectedNews();
     }
 
     //  news detail template
-    renderNews = ({selected}) => {
-        if(selected){
+    renderNews = ({ selected }) => {
+        if (selected) {
             // console.log(selected)
-            return selected.map((item)=>{
-                return(
+            return selected.map((item) => {
+                return (
                     <div key={item.id}>
                         <div className="tags">
                             <span>
@@ -48,7 +48,12 @@ class News extends Component {
                             {item.body}
                         </div>
                         <div>
-                            <Counter articleId={item.id} likes={item.likes[0]} dislikes={item.likes[1]} />
+                            <Counter
+                                articleId={item.id}
+                                type="HANDLE_LIKES_ARTICLE"
+                                section="articles"
+                                likes={item.likes[0]}
+                                dislikes={item.likes[1]} />
                         </div>
                     </div>
                 );
@@ -56,8 +61,8 @@ class News extends Component {
         }
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div className="news-container">
                 {this.renderNews(this.props.articles)}
             </div>
@@ -66,16 +71,16 @@ class News extends Component {
 }
 
 // subscipt data 
-function mapStateToProps(state){
+function mapStateToProps(state) {
     // console.log(state)
-    return{
+    return {
         articles: state.articles
     }
 }
 
 // pass action to props
-function mapDispatchToPropsI(dispatch){
-    return bindActionCreators({selectedNews, clearSelectedNews}, dispatch);
+function mapDispatchToPropsI(dispatch) {
+    return bindActionCreators({ selectedNews, clearSelectedNews }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToPropsI)(News);
