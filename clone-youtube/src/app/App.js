@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import SearchBar from '../components/search_bar'
+
+const API_KEY = "AIzaSyCqjaLUdTMEAXsFShA_f-QWVnZSsOUD5Io"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <SearchBar />
       </div>
     );
   }
 }
 
-export default App;
+export default App
