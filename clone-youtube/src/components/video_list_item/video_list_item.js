@@ -5,8 +5,8 @@ const VideoListItem = ({ video }) => {
     const imageUrl = video.snippet.thumbnails.default.url
 
     return (
-        <li className="list-group-video">
-            <div className="video-list-media">
+        <li className="list-group-item">
+            <div className="video-list-media video-item">
                 <div className="media-left">
                     <img className="media-object" alt="test" src={imageUrl} />
                 </div>
