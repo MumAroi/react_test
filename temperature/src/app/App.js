@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App container">
-        <div className="col-md-10 mt-3 align-self-center">
+        <div className="col-md-12 mt-3 align-self-center">
           <SearchBar />
         </div>
         <div>

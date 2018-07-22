@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchWeather } from '../../actions'
 
+import './style.css'
+
 class SearchBar extends Component {
 
     constructor(props) {
