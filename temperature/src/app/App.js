@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+
 import SearchBar from '../containers/search_bar'
+import WeatherList from '../containers/weather_list'
 
 class App extends Component {
   render() {
@@ -7,6 +9,9 @@ class App extends Component {
       <div className="App container">
         <div className="col-md-10 mt-3 align-self-center">
           <SearchBar />
+        </div>
+        <div>
+          <WeatherList/>
         </div>
       </div>
     );
